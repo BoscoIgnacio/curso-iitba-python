@@ -1,0 +1,31 @@
+Opción 3: Análisis de datos obtenidos por un instrumento de medición
+Analisis de una señal de un electrocardiograma para conseguir información de un paciente.
+
+Un electrocardiograma es una representación gráfica de los pulsos cardíacos. Se tiene un archivo electrocardiograma.xlsx con la información del resultado de un electrocardiograma en dos columnas, una tiene los valores de las mediciones en eV (columna señal), y la segunda los instantes (medido en segundos transcurridos) en que se toma cada medición (columna tiempo) que fueron tomadas con una frecuencia de 360 Hz.
+
+Funcionalidad mínima (requisito):
+
+Se debe poder calcular los picos de la señal y marcarlos en un gráfico de la misma.
+
+Sugerencia: Usar la función scipy.signal.find_peaks de la librería scipy (en la documentación hay ejemplos muy útiles).
+
+Se debe poder calcular la frecuencia cardíaca del paciente medida en latidos por minuto a partir de los picos más altos de cada pulsación.
+
+Determinar si el electrocardiograma fue tomado mientras el paciente dormía, estaba en reposo o hacia actividad física. Tomar como referencia los criterios de la frecuencia cardíaca y pedir como entrada del programa cualquier información adicional necesaria (como la edad o el sexo del paciente).
+
+Se deben poder almacenar los resultados en un archivo de texto .txt
+
+Gráfico a entregar (requisito):
+
+Graficar la señal del electrocardiograma en función del tiempo señalando el pico más alto de cada pulsación. Indicar la frecuencia cardíaca dentro del gráfico (puede ser mediante labels, título, descripción, etc).
+Funcionalidad opcional: Pueden realizar todos, algunos, o ninguno de los siguientes ítems. También pueden agregar otra funcionalidad que se les ocurra a ustedes en tanto cumpla con la funcionalidad mínima.
+
+Identificar la onda P, el complejo QRS y la onda T para cada pulsación. Pueden investigar más en esta página de Wikipedia.
+
+Analizar y graficar la densidad espectral de potencia de la señal, calcular su valor en 60 Hz (la frecuencia de la instalación eléctrica donde se realizaron las mediciones) para averiguar si la instalación eléctrica afecta a la medición. Para esto pueden utilizar la función scipy.signal.welch de la librería scipy.
+
+Atención: La matemática para hacer este análisis puede resultar avanzada y no es necesario entenderla, alcanza con entender el funcionamiento de las funciones de librería y saber aplicarlas correctamente.
+
+Para cada gráfico generado el usuario deberá poder ingresar un nombre de archivo y el programa genera un archivo .PNG del gráfico con el nombre indicado.
+
+Crear una aplicación de consola que se ejecute continuamente recibiendo comandos del usuario, el usuario debe indicar el modo de operación que desea y el programa le pide los datos requeridos. Luego de finalizar la tarea el programa regresa al inicio y le pide al usuario el próximo comando. Incluír un comando de ayuda para que el programa indique al usuario cómo utilizarlo. Incluír un comando de salida que provoca la finalización del programa.
