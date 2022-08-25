@@ -67,3 +67,4 @@ state = act_patient(hr, sex)
 ### guardamos en un .txt
 with open("Resultados electrocardiograma.txt","w+") as f:
     f.write(f"Sexo del paciente: {sex_abbr_to_text(sex)}\nFrecuencia Cardiaca: {int(hr)}\n{state}\n")
+### end of code
